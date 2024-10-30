@@ -106,8 +106,8 @@ if not ddp or is_master:
     print(f"The current device being used is {device} on {gpu}")
 
 
-token = "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"
-# login(token)
+#token = ""
+#login(token)
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True,
                                 bnb_4bit_quant_type='nf4',
