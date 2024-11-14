@@ -25,8 +25,8 @@ This repository contains a Python script designed to fine-tune causal language m
 Load your dataset and use ```dataset_prep.ipynb``` to prepare the dataset by tokenizing it
 
 ### 2. Run 
-Run the code using ```torchrun -standalone -nproc_per_node=x main.py``` where x is the amount of GPUs you have
+Run the training using ```torchrun -standalone -nproc_per_node=x main.py``` where x is the amount of GPUs you have
 
 # Future Work
 
-I am working on improving the efficiency of the model
+Currently working on improving the efficiency of the models by exploring more VRAM efficient techniques.
