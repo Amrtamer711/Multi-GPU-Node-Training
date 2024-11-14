@@ -171,20 +171,3 @@ model = train_model(model, train_dataloader, val_dataloader, train_inference_dat
 
 if ddp:
     dist.destroy_process_group()
-
-
-'''Notes: 
-Check if training works
-Try to get trainer class to work
-Add bos and eos token to prompts
-Figure out how to do consistent logging for trainer class
-Make optuna functions for both training
-Encapsulate lora setup
-'''
-
-
-
-# # Test the model
-# test_loss = test_model(model, test_dataloader, device, fp16=True, ddp=ddp)
-# if is_master:
-#     print(f"Test Loss: {test_loss:.4f}")
