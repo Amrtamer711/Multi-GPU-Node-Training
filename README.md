@@ -1,5 +1,5 @@
 # Distributed Training with LoRA Fine-Tuning for Causal Language Models
-This repository contains a Python script designed to fine-tune causal language models, such as LLaMA, using Parameter Efficient Fine-Tuning (PEFT) techniques like LoRA and DoRA. It supports distributed training via PyTorch's Distributed Data Parallel (DDP) and includes tools for dataset handling, evaluation, and inference.
+This repository contains a Python script designed to fine-tune causal language models, such as LLaMA, using Parameter Efficient Fine-Tuning (PEFT) techniques like LoRA and DoRA. It contains some optimzations such as gradient checkpointing. It supports distributed training via PyTorch's Distributed Data Parallel (DDP) and includes tools for dataset handling, evaluation, and inference.
 
 ## Features
 
@@ -19,3 +19,14 @@ This repository contains a Python script designed to fine-tune causal language m
 - ```torch.distributed```
 - ```scikit-learn```
 - ```huggingface_hub (if you are using a private model)```
+
+# Usage
+### 1. Prepare Datasets
+Load your dataset and use ```dataset_prep.ipynb``` to prepare the dataset by tokenizing it
+
+### 2. Run 
+Run the code using ```torchrun -standalone -nproc_per_node=x main.py``` where x is the amount of GPUs you have
+
+# Future Work
+
+I am working on improving the efficiency of the model
